@@ -1,5 +1,5 @@
 {
-  "name": "Power Up Solutions Routing App",
+  "name": "Power Up Solutions Routing App v9",
   "short_name": "Power Up Routes",
   "description": "Power Up Solutions field routing and homeowner prospecting app.",
   "id": "./",
@@ -9,7 +9,11 @@
   "background_color": "#050505",
   "theme_color": "#050505",
   "orientation": "portrait-primary",
-  "categories": ["business", "productivity", "navigation"],
+  "categories": [
+    "business",
+    "productivity",
+    "navigation"
+  ],
   "icons": [
     {
       "src": "./icon-192.png",
