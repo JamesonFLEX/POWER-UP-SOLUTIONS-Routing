@@ -1,0 +1,31 @@
+POWER UP SOLUTIONS V11 - LOGIN EMAIL SETUP
+
+The app already records each user session in Firestore under loginEvents and queues an email document under mail.
+
+ONE-TIME FIREBASE SETUP
+
+1. Open Firebase Console for power-up-solutions-routing.
+2. Open Firestore Database > Rules.
+3. Replace the rules with the included firestore.rules file and click Publish.
+4. Open Build > Extensions and install "Trigger Email from Firestore" by Firebase.
+5. If Firebase requests billing, upgrade this project to the Blaze plan. Set budget alerts before continuing.
+6. During extension configuration use:
+   Email documents collection: mail
+   Default FROM address: an address verified by your email provider
+   SMTP connection: credentials supplied by SendGrid, Mailgun, or another supported SMTP provider
+7. Complete the installation and test by signing out of the routing app and signing back in.
+
+RESULT
+
+Each new app session queues an email to SolarJameson@gmail.com containing:
+- Team member name and Google email
+- Login/open time
+- Selected Rocklin or Stockton market
+- Device and browser information
+- App version
+
+The loginEvents collection remains your permanent usage history even if email delivery is temporarily unavailable.
+
+SECURITY
+
+Never place an SMTP password, Gmail password, or private API key inside index.html. The included Firestore rules only permit approved team members to queue messages addressed to SolarJameson@gmail.com.
