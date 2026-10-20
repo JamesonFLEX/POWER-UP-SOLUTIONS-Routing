@@ -6,15 +6,5 @@ service cloud.firestore {
     function team() { return owner() || (signedIn() && exists(/databases/$(database)/documents/allowedEmails/$(request.auth.token.email))); }
     match /routeStops/{stopId} { allow read, write: if team(); }
     match /allowedEmails/{email} { allow read: if team(); allow create, update, delete: if owner(); }
-    match /loginEvents/{eventId} {
-      allow create: if team() && request.resource.data.uid == request.auth.uid && request.resource.data.email == request.auth.token.email;
-      allow read: if owner();
-      allow update, delete: if false;
-    }
-    match /mail/{mailId} {
-      allow create: if team() && request.resource.data.to == ['SolarJameson@gmail.com'];
-      allow read: if owner();
-      allow update, delete: if false;
-    }
   }
 }
