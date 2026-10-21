@@ -1,0 +1,17 @@
+POWER UP SOLUTIONS ROUTING APP V12 - GOOGLE SOLAR SETUP
+
+The app works immediately without Google Solar data. To activate roof insights:
+
+1. In Google Cloud, enable billing for your project.
+2. Enable only the Solar API.
+3. Create an API key and restrict it to the Solar API.
+4. In GitHub open the routing repository, then Settings > Secrets and variables > Actions.
+5. Create a repository secret named GOOGLE_SOLAR_API_KEY and paste the key there.
+6. Open the Actions tab, choose Refresh Google Solar Insights, and tap Run workflow.
+7. Set the Solar API daily quota to 1,000 requests as an extra cost safeguard.
+
+Google Building Insights currently includes 10,000 free requests per month, but Google requires billing to be enabled. The app contains 2,959 unique properties. The first manual run can refresh all of them. Scheduled Monday runs automatically refresh one quarter at a time, so every property refreshes within 28 days while normal usage remains around 2,959 requests per four weeks.
+
+Google Solar data may be cached for no more than 30 days. The weekly workflow keeps the cache current and the app displays Google's required attribution.
+
+Never paste the key into index.html or commit it to GitHub.

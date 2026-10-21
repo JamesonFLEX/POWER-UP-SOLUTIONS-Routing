@@ -1,7 +1,7 @@
 {
-  "name": "Power Up Solutions Routing App v11",
+  "name": "Power Up Solutions Routing App v12",
   "short_name": "Power Up Routes",
-  "description": "Power Up Solutions field routing and homeowner prospecting app.",
+  "description": "Power Up Solutions field routing, homeowner prospecting, and Door Score app.",
   "id": "./",
   "start_url": "./index.html",
   "scope": "./",
