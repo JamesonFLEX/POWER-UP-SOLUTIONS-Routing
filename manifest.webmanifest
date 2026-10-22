@@ -1,9 +1,9 @@
 {
-  "name": "Power Up Solutions Routing App v14",
+  "name": "Power Up Solutions Routing App v15",
   "short_name": "Power Up Routes",
-  "description": "Power Up Solutions routing app with verified property years and tappable Google Maps satellite links.",
+  "description": "Power Up Solutions routing app with exact full-address Google Maps searches and satellite-view requests.",
   "id": "./",
-  "start_url": "./index.html?v=14",
+  "start_url": "./index.html?v=15",
   "scope": "./",
   "display": "standalone",
   "background_color": "#050505",
